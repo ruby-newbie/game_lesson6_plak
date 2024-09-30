@@ -16,12 +16,11 @@ set title: "Hit the man!",
 @hit = Sprite.new(
   'hit.png',
   width: 79,
-  height: 270, 
-  x: 850, 
+  height: 270,
+  x: 850,
   y: 850,
   # time: 300
   loop: false
-  
 )
 
 @score_text = Text.new("Score: #{@score}", size: 100)
@@ -34,9 +33,9 @@ on :mouse_down do |event|
   end
 end
 
-on :mouse_down do |event|
+on :mouse_move do |event|
   @hit.x = event.x - @hit.width/2
-  @hit.y = event.x - @hit.height/2
+  @hit.y = event.y - @hit.height/2
 end
 
 
